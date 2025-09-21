@@ -166,7 +166,7 @@ a {
 .section-1-titre {
   font-family: var(--police-grostitre);
   color: var(--color-text_black);
-  font-size: clamp(5vh, 11vh, 18vh);
+  font-size: clamp(3vh, 9vh, 15vh);
 }
 .section-1-accroche {
   font-family: var(--police-stitre);
@@ -637,7 +637,7 @@ a {
   .section-1-titre {
     font-family: var(--police-grostitre);
     color: var(--color-text_black);
-    font-size: clamp(3vh, 9vh, 11vh);
+    font-size: clamp(3vh, 6.5vh, 9vh);
   }
 
   .main_image {
@@ -647,3 +647,4 @@ a {
     height: 50vh;
   }
 }
+
