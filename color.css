@@ -1,0 +1,13 @@
+:root {
+  --color-primary: rgba(17, 161, 180, 0.361);
+  --color-secondary: rgba(190, 47, 215, 0.815);
+  --color-bouton: rgba(184, 15, 184, 0.47);
+  --color-background_white: #ecf0f1e6;
+  --color-background_black: rgb(0, 0, 0);
+  --color-text_white: black;
+  --color-text_black: rgba(255, 255, 255, 0.872);
+  --color-card_background: #ffffffdd;
+  --header-color: rgba(47, 156, 156, 0.776);
+  --header-color-black: black;
+  --articlecarte-color: rgba(109, 31, 145, 0.747);
+}
