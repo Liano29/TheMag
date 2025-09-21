@@ -1,0 +1,649 @@
+@import url(police.css);
+@import url(color.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--police-text);
+}
+html {
+  background-color: var(--color-background_white);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+/* style pour le scroll bar */
+::-webkit-scrollbar {
+  width: 1vw;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bouton);
+  border-radius: 5px;
+}
+/* style pour le body dark et light */
+.body {
+  background-color: var(--color-background_white);
+  color: var(--color-text_white);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  transition: all 0.5s ease;
+}
+
+.bodydark {
+  background-color: var(--color-background_black);
+  color: var(--color-text_black);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  transition: all 0.5s ease;
+}
+.bodydark html {
+  background-color: var(--color-background_black);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  font-family: var(--police-text);
+  color: var(--color-text_white);
+  margin: 0;
+  padding: 0;
+}
+/* style pour les link sur toute les pages */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* style pour tout ce qui concerne le header de tout les pages */
+.header-logo {
+  width: 10vw;
+  height: 14vh;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+.header {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20vw;
+  align-items: center;
+  background-color: var(--header-color);
+}
+.bodydark .header {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20vw;
+  align-items: center;
+  background-color: var(--header-color-black);
+}
+
+.header-navbar {
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+  gap: 5vw;
+  border: solid 1px var(--color-bouton);
+  border-radius: 50px;
+  background-color: var(--color-primary);
+  backdrop-filter: blur(10px);
+  right: 2vw;
+  position: fixed;
+  z-index: 1000;
+}
+.navbar-close {
+  display: none;
+}
+.header-navbar a:hover {
+  font-weight: bold;
+  color: var(--color-text_black);
+  background-color: var(--color-bouton);
+  padding: 0.5vw 1vw;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.header-navbar a.active {
+  transform: scale(0.95);
+  transition: all 0.1s ease;
+  color: var(--color-text_black);
+  background-color: var(--color-bouton);
+  padding: 0.5vw 0.5vw;
+  border-radius: 20px;
+}
+.header-bouton_mode svg:last-child {
+  display: none;
+}
+
+.bodydark .header-bouton_mode svg:first-child {
+  display: none;
+}
+.bodydark .header-bouton_mode svg:last-child {
+  display: block;
+  fill: var(--color-text_black);
+}
+
+.header-bouton_mode {
+  border-radius: 50px;
+  background-color: var(--color-primary);
+  border: solid 1px var(--color-bouton);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+.header-bouton_mode:hover {
+  background-color: var(--color-secondary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.header-burger {
+  position: absolute;
+  right: 0;
+  display: none;
+}
+.bodydark .header-burger {
+  fill: var(--color-text_black);
+}
+.bodydark .navbar-close {
+  fill: var(--color-text_black);
+}
+/* style pour le main de la page index (accueil) */
+.main-section-1 {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  width: 100vw;
+  background-color: var();
+  padding: 1vw;
+}
+.section-1-titre {
+  font-family: var(--police-grostitre);
+  color: var(--color-text_black);
+  font-size: clamp(5vh, 11vh, 18vh);
+}
+.section-1-accroche {
+  font-family: var(--police-stitre);
+  color: var(--color-text_black);
+  font-size: clamp(2.5vh, 5.5vh, 9vh);
+}
+.main_image {
+  flex-shrink: 0;
+  padding: 1vw;
+  width: 98%;
+  height: 90vh;
+}
+
+.slider-1 {
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  animation: slider-1 12s infinite ease-in-out;
+}
+@keyframes slider-1 {
+  0%,
+  11.285% {
+    transform: translateX(0);
+  }
+  14.285%,
+  25.570% {
+    transform: translateX(-100%);
+  }
+  28.570%,
+  39.855% {
+    transform: translateX(-200%);
+  }
+  42.855%,
+  54.140% {
+    transform: translateX(-300%);
+  }
+  57.140%,
+  68.425% {
+    transform: translateX(-400%);
+  }
+  71.425%,
+  82.710% {
+    transform: translateX(-500%);
+  }
+  85.710%,
+  100% {
+    transform: translateX(-600%);
+  }
+}
+
+/* style section temoigne index */
+.temoigne {
+  margin-top: 20vh;
+  background: radial-gradient(circle at top, #1a237e, #0d1b2a, #000000);
+}
+.temoigne_titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: var(--color-text_black);
+  padding: 1vw;
+  font-family: var(--police-grostitre);
+  font-size: clamp(2.5vh, 3vh, 4vh);
+}
+.aviscarte-contenair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aviscarte {
+  color: var(--color-text_black);
+  border: 1px groove var(--color-bouton);
+  margin: 5vw;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+  padding: 1vh;
+  width: 50vw;
+  height: auto;
+  background-color: var(--articlecarte-color);
+}
+.aviscarte h5 {
+  font-family: var(--police-stitre);
+  text-decoration: underline;
+}
+.aviscarte_perso {
+  border-radius: 999px;
+  width: 20vw;
+}
+.aviscarte:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease;
+}
+.aviscarte p {
+  font-size: clamp(1.5vh, 2.5vh, 3.5vh);
+}
+/* style pour section pub de index */
+.pub_titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: var(--color-text_black);
+  padding: 1vw;
+  font-family: var(--police-grostitre);
+  font-size: clamp(2.5vh, 3vh, 4vh);
+}
+.pub {
+  margin-top: 20vh;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+.pub_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 1.5vw;
+}
+.pagination_boutonB1 {
+  width: 5vw;
+  border-radius: 50px;
+}
+.pagination_boutonB2 {
+  width: 5vw;
+  border-radius: 50px;
+}
+.pagination_boutonB3 {
+  width: 5vw;
+  border-radius: 50px;
+}
+.pagination_boutonI1 {
+  border-radius: 50px;
+}
+.pagination_boutonI2 {
+  border-radius: 50px;
+}
+.pagination_boutonB1:hover {
+  background-color: var(--color-primary);
+}
+.pagination_boutonB2:hover {
+  background-color: var(--color-primary);
+}
+
+.pagination_boutonB3:hover {
+  background-color: var(--color-primary);
+}
+
+.pagination_boutonI1:hover {
+  background-color: var(--color-primary);
+}
+
+.pagination_boutonI2:hover {
+  background-color: var(--color-primary);
+}
+
+.pub_publication {
+  width: 60vw;
+  height: 60vh;
+  background-color: var(--articlecarte-color);
+  margin-left: 20vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moob {
+  width: 35vw;
+}
+/* style pour about section de la page about */
+.about_carousel {
+  background-color: var(--color-primary);
+  width: 70vw;
+  height: 60vh;
+  margin-left: 15vw;
+  margin-top: 13vh;
+  border: 3px groove var(--color-secondary);
+  border-radius: 10px;
+  padding: 2vw;
+}
+.carousel_titre {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: var(--police-grostitre);
+  text-decoration: underline;
+}
+.carousel_durer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: var(--police-stitre);
+}
+.carousel_text {
+  font-family: var(--police-stitre);
+}
+.carousel_img {
+  border-radius: 999px;
+  width: 30vw;
+  height: auto;
+}
+/* style pour conctact section de la page contact */
+.contact-section {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin: 2vw;
+  border: 1px solid var(--color-bouton);
+  border-radius: 1vh;
+  padding: 2vw;
+  background-color: var(--color-primary);
+}
+.contact-form {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 45% 40% 15%;
+  grid-template-areas:
+    "name message"
+    "email message"
+    "videe button";
+  border-radius: 5px;
+}
+.name {
+  grid-area: name;
+  border-radius: 5px;
+  border: 1px solid var(--color-bouton);
+  font-size: clamp(2vw, 2vw, 2vh);
+}
+.email {
+  grid-area: email;
+  border-radius: 5px;
+  border: 1px solid var(--color-bouton);
+  font-size: clamp(2vw, 2vw, 2vh);
+}
+.message {
+  grid-area: message;
+  border-radius: 5px;
+  border: 1px solid var(--color-bouton);
+  resize: none;
+  font-size: clamp(2vw, 2vw, 2vh);
+}
+
+.bouton-submit_contact {
+  grid-area: button;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid var(--color-bouton);
+  background-color: var(--color-bouton);
+  color: var(--color-text_black);
+  font-size: clamp(1px, 2vw, 2vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bouton-submit_contact:hover {
+  background-color: var(--color-secondary);
+  transition: all 0.3s ease;
+  transform: scale(0.95);
+}
+.iconecart {
+  cursor: pointer;
+}
+.iconecart:hover {
+  transform: scale(1.6);
+  transition: all 0.4s ease;
+  fill: var(--color-bouton);
+}
+.bodydark .iconecart:hover {
+  transform: scale(1.6);
+  transition: all 0.4s ease;
+  fill: var(--color-bouton);
+}
+.map {
+  width: 50vw;
+  height: 60vh;
+  border: 3px solid var(--color-bouton);
+  border-radius: 5px;
+  margin-top: 2vh;
+  display: none;
+}
+.section_info {
+  font-size: clamp(2vw, 2vw, 2vh);
+}
+.bodydark .iconephone,
+.bodydark .iconemail,
+.bodydark .iconecart {
+  fill: var(--color-text_black);
+}
+/* style pour article  de la page article */
+/* style de la barre de recherhe */
+.main_barre_de_recherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vw;
+  gap: 2.5px;
+}
+.barre_de_recherche {
+  width: 40vw;
+  height: 5vh;
+  border: 1px solid var(--color-secondary);
+  padding: 0 1vw;
+  font-size: clamp(1vw, 2vw, 2vh);
+  border-radius: 50px;
+  background-color: var(--color-background_white);
+}
+
+.bouton_recherche {
+  width: 10vw;
+  height: 5vh;
+  border: none;
+  background-color: var(--color-secondary);
+  fill: var(--color-background_black);
+  font-size: clamp(1vw, 2vw, 2vh);
+  cursor: pointer;
+  border-radius: 50px;
+}
+.bouton_recherche:hover {
+  background-color: var(--color-bouton);
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+  font-weight: bold;
+}
+.bodydark .bouton_recherche {
+  fill: var(--color-background_white);
+}
+/* style pour les carte des articles */
+.articlecarte {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.articlecarte-skin {
+  border: 1px groove var(--color-bouton);
+  margin: 5vw;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+  padding: 1vh;
+  width: 35vw;
+  height: auto;
+  background-color: var(--articlecarte-color);
+}
+.articlecarte-skin:hover {
+  transform: scale(1.3);
+  transition: all 0.4s ease;
+}
+.model {
+  width: 30vw;
+}
+
+.model_titre {
+  font-size: clamp(1vw, 1.5vw, 2vw);
+  text-decoration: underline;
+}
+.model_text {
+  font-size: clamp(1vw, 1.5vw, 2vw);
+}
+.model_prix {
+  font-size: clamp(1vw, 1.5vw, 2vw);
+}
+
+@media screen and (max-width: 700px) {
+  /* style pour tout ce qui concerne le header en mode responsive */
+  .navbar-close {
+    display: block;
+  }
+  .header-navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 60vw;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5vw;
+    gap: 3vh;
+    border-radius: 2px;
+    transition: transform 0.5s ease-in-out;
+
+    z-index: 10;
+  }
+  .header-bouton_mode {
+    position: fixed;
+    bottom: 0;
+    right: -100%;
+    width: 60vw;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5vw;
+    gap: 3vh;
+    border-radius: 0;
+    border: none;
+    transition: transform 0.5s ease-in-out;
+    z-index: 10;
+  }
+  .header-burger {
+    display: block;
+    cursor: pointer;
+    margin-right: 2vw;
+  }
+  /* style pour conctact section de la page contact */
+  .contact-section {
+    display: block;
+    margin: 2vw;
+    border: 1px solid var(--color-bouton);
+    border-radius: 1vh;
+    padding: 2vw;
+    background-color: var(--color-primary);
+  }
+  /* style main index  */
+
+  .main_image {
+    flex-shrink: 0;
+    padding: 1vw;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .aviscarte-contenair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  /* style article */
+  .model_titre {
+    font-size: clamp(1vw, 2vw, 3vw);
+    text-decoration: underline;
+  }
+  .model_text {
+    font-size: clamp(1vw, 2vw, 3vw);
+  }
+  .model_prix {
+    font-size: clamp(1vw, 2vw, 3vw);
+  }
+}
+@media screen and (max-width: 300px) {
+  /* style pour la page articles */
+  .articlecarte {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .model_titre {
+    font-size: clamp(1vw, 2vw, 3vw);
+    text-decoration: underline;
+  }
+  .model_text {
+    font-size: clamp(1vw, 2vw, 3vw);
+  }
+  .model_prix {
+    font-size: clamp(1vw, 2vw, 3vw);
+  }
+  /* style main index  */
+  .section-1-titre {
+    font-family: var(--police-grostitre);
+    color: var(--color-text_black);
+    font-size: clamp(3vh, 9vh, 11vh);
+  }
+
+  .main_image {
+    flex-shrink: 0;
+    padding: 1vw;
+    width: 100%;
+    height: 50vh;
+  }
+}
